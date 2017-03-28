@@ -1,3 +1,5 @@
 Redux-Weather-App
 ====
-A REACT app built with redux managing state [WIP]
+A React app built with *Redux* managing state **[WIP]**
+
+Courtesy built with based on **Stephen Grider's** excellent react course (Modern React with Redux)
