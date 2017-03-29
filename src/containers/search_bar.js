@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-
+import styled from 'styled-components';
 class SearchBar extends Component {
   static propTypes = {
     children: PropTypes.node,
