@@ -3,30 +3,28 @@ import styled from 'styled-components';
 import SearchBar from '../containers/search_bar.js';
 
 const Title = styled.h1`
-  font-size: 1.5em;
+  font-size: 2em;
   text-align: center;
-  color: palevioletred;
+  color: skyBlue;
+  margin-bottom: 1em;
 `;
 
-const wrapper = styled.div`
-  background: yellow;
+const Wrapper = styled.div`
+  font-family: 'Helvetica';
   height: 100vh;
   width: 100vw;
-
-
-
+  background-color: Seashell;
+  padding: 0em;
 `;
+
 export default class App extends Component {
   render() {
     return (
-      <div>
-        <wrapper>
-          <Title>Hello</Title>
+        <Wrapper>
+          <Title>Akin's Redux Weather App</Title>
           <SearchBar/>
-        </wrapper>
-      </div>
+        </Wrapper>
       );
   }
 }
-
 
