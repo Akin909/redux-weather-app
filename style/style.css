@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+* {
+    box-sizing: inherit;
+
+}

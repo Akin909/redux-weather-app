@@ -7,31 +7,36 @@ import { fetchWeather } from '../actions/index.js';
 const Input = styled.input`
   font-size: 1.25em;
   padding: 0.5em;
-  color: palevioletred
+  color: skyBlue;
   border: none
   border-radius: 3px;
   width: 80%;
   height: 100%;
-  margin: 0 0.5em;
-  background: papyawhip;
-  highlight: none;
+  margin: 0.5em 0.5em;
+  background: hsla(0,0,0,0.4);
+  outline: none;
   &:hover {
     box-shadow: inset 1px 1px 2px rgba(0,0,0.1);
   }
 `;
 
 const Form = styled.form`
+  width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   `;
 
 // const Span = styled.span``;
   const Button = styled.button`
-    color: palevioletred
+    color: white;
+    background:#00599D;
     border: none;
-    width: 7em;
-    height: 100%;
+    border-radius:50%;
+    width: 4em;
+    height: 4em;
+    box-shadow: 0px 2px 3px grey;
   `;
 
   const Span = styled.span`
@@ -77,7 +82,7 @@ class SearchBar extends Component {
           onChange={ this.onInputChange }
         /> 
         <Span>
-          <Button type="submit">Submit</Button>
+          <Button type="submit">&#43;</Button>
         </Span>
       </Form>
     );
