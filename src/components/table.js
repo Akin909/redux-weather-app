@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-  // border: 1px solid grey;
 const Table = styled.table`
   margin: 1rem 0;
   padding: 0;
@@ -32,6 +31,11 @@ const Td = styled.td`
   vertical-align: middle !important;
   text-align: center !important;
   `;
+const TdMap = styled.td`
+  height: 200px;
+  width: 250;
+  padding: 0.2rem;
+  `;
 
 const Th = styled.th`
   padding: 0.2rem;
@@ -39,4 +43,4 @@ const Th = styled.th`
   text-align: center !important;
 `;
 
-export { Td, Th, Tbody, Tr, Thead, Table };
+export { Td, TdMap, Th, Tbody, Tr, Thead, Table };

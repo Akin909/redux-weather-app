@@ -1,7 +1,30 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import  styled,{injectGlobal } from 'styled-components';
 import SearchBar from '../containers/search_bar.js';
 import WeatherList from '../containers/weather_list.js';
+
+injectGlobal`
+html {
+    height: 100vh;
+    width: 100vw;
+}
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    box-sizing: inherit;
+
+}
+.exception {
+    height: 200px;
+    width: 250px;
+}
+`;
 
 
 const Title = styled.h1`
