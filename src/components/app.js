@@ -9,7 +9,8 @@ const Title = styled.h1`
   width: 100%;
   font-size: 2em;
   text-align: center;
-  height: 2em;
+  height: auto;
+  padding: 0.5rem
   margin: 0;
   margin-bottom: 1em;
   color: white;
@@ -23,7 +24,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   width: 100vw;
   background-color: #ECECEC;
   padding: 0em;

@@ -1,36 +1,38 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 import uuid from 'uuid/V4';
-import { Td, Tbody, Tr, Thead, Table} from '../components/table.js';
+import { Td, Tbody, Th, Tr, Thead, Table} from '../components/table.js';
 import Chart from '../components/chart.js';
 
 
 class WeatherList extends Component {
   renderWeather(cityData){
     const name = cityData.city.name;
-    const temps = cityData.list.map( weather => weather.main.temp );
+    const temps = _.map( cityData.list.map( weather => weather.main.temp ), (temp) => temp -273);
     const humidity = cityData.list.map( weather => weather.main.humidity );
+    const pressures = cityData.list.map( weather => weather.main.pressure );
 
 
     return (
       <Tr key={uuid()}>
         <Td>{name}</Td>
-        <Td>
-          <Chart data={temps} color="red" />
-        </Td>
+        <Td> <Chart units="°C" data={temps} color="red" /> </Td>
+        <Td> <Chart units="hPa" data={pressures} color="green" /> </Td>
+        <Td> <Chart units="%" data={humidity} color="blue" /> </Td>
       </Tr>
       );
   }
 
   render() {
     return (
-      <Table>
+      <Table overFlowY={scroll}>
         <Thead>
           <Tr>
-            <th>City</th>
-            <th>Temperature</th>
-            <th>Pressure</th>
-            <th>Humidity</th>
+            <Th>City</Th>
+            <Th>Temperature (°C)</Th>
+            <Th>Pressure (hPa)</Th>
+            <Th>Humidity (%)</Th>
           </Tr>
         </Thead>
         <Tbody>

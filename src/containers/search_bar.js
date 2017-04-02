@@ -26,9 +26,9 @@ const Form = styled.form`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   `;
 
-// const Span = styled.span``;
   const Button = styled.button`
     color: white;
     background:#00599D;
@@ -80,6 +80,7 @@ class SearchBar extends Component {
           placeholder="Get a five-day forecast in your favorite cities"
           value={ this.state.term }
           onChange={ this.onInputChange }
+          autoFocus={focus}
         /> 
         <Span>
           <Button type="submit">&#43;</Button>
